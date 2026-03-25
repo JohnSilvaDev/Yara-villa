@@ -12,12 +12,7 @@ function Hero() {
           Experience luxury on the water
         </p>
 
-        <div className={styles.buttonGroup}>
-          <button className={styles.primaryBtn}>
-            Book Now
-          </button>
-
-        </div>
+      
       </div>
 
     </section>
