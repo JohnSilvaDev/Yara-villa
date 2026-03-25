@@ -1,0 +1,60 @@
+.hero {
+  height: 100vh;
+  background: #ffee58; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  text-align: center;
+  color: black; /* 👈 important */
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: black;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: black;
+}
+
+.buttonGroup {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.primaryBtn {
+  background: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.primaryBtn:hover {
+  background: #f1f1f1;
+  transform: translateY(-2px);
+}
+
+.secondaryBtn {
+  background: transparent;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid white;
+  transition: all 0.3s ease;
+}
+
+.secondaryBtn:hover {
+  background: white;
+  color: black;
+}
