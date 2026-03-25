@@ -1,13 +1,165 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;600;700&display=swap');
+
+/* RESET */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #111;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* HEADINGS */
+h1, h2, h3, h4, h5 {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+/* HERO TITLE (MAIN BRAND) */
+.display-3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  letter-spacing: -1px;
+
+  /* GRADIENT TEXT */
+  background: linear-gradient(120deg, #ffffff, #dfefff, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* SUBTLE WIND ANIMATION */
+  animation: windFloat 6s ease-in-out infinite;
+}
+
+/* HERO SUBTEXT */
+.lead {
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+/* WIND FLOAT ANIMATION */
+@keyframes windFloat {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-5px) translateX(2px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+/* BUTTONS */
+.btn {
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* GALLERY IMAGES */
+img {
+  border-radius: 12px;
+}
+
+/* FORM CARD */
+.shadow {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08) !important;
+}
+
+/* INPUTS */
+.form-control {
+  border-radius: 10px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #000;
+  box-shadow: none;
+}
+
+/* FLOATING BUTTONS ANIMATION */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0,0,0,0.2);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(0,0,0,0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0,0,0,0);
+  }
+}
+
+/* Apply subtle pulse */
+a[href*="wa.me"] {
+  animation: pulse 2.5s infinite;
+}
+
+/* SECTION SPACING */
+section, .container {
+  scroll-margin-top: 80px;
+}
+
+/* FOOTER */
+footer {
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+.premium-section {
+  opacity: 0;
+  transform: translateY(60px);
+  filter: blur(10px);
+  transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* WHEN VISIBLE */
+.premium-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* TITLE ANIMATION */
+.premium-title {
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 1s ease;
+  transition-delay: 0.2s;
+}
+
+.premium-section.visible .premium-title {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* TEXT ANIMATION (STAGGERED) */
+.premium-text {
+  max-width: 700px;
+  font-size: 1.1rem;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 1.2s ease;
+  transition-delay: 0.5s;
+}
+
+.premium-section.visible .premium-text {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* SUBTLE PARALLAX FEEL */
+.premium-section {
+  will-change: transform, opacity;
 }
