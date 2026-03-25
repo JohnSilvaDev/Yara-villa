@@ -22,24 +22,21 @@ function App() {
       });
 
       const data = await res.json();
-      console.log("RESPONSE:", data);
+      if (!res.ok) throw new Error(data.error);
 
-      if (!res.ok) throw new Error(data.error || "Something went wrong");
-
-      alert("Inquiry sent successfully! ✅");
-
+      alert("Inquiry sent successfully!");
       setForm({ name: "", email: "", phone: "" });
 
-    } catch (error) {
-      console.error("FRONTEND ERROR:", error);
-      alert("Failed to send inquiry. Try again.");
+    } catch (err) {
+      alert("Something went wrong.");
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div>
+    <div style={{ fontFamily: "Helvetica, Arial, sans-serif" }}>
+
       {/* HERO */}
       <div
         className="vh-100 d-flex align-items-center justify-content-center text-white text-center"
@@ -47,90 +44,127 @@ function App() {
           backgroundImage: "url('/hero.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
+          position: "relative",
         }}
       >
-        <div style={{ background: "rgba(0,0,0,0.5)", padding: "30px", borderRadius: "20px" }}>
-          <h1 className="display-4">Yara Floating Villa</h1>
-          <p className="lead">Live on the water. Feel the wind.</p>
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "rgba(0,0,0,0.4)",
+          }}
+        />
+
+        <div style={{ position: "relative", zIndex: 2 }}>
+          <h1 className="display-3 fw-bold">Yara Floating Villa</h1>
+          <p className="lead mb-4">
+            A unique floating escape in Guriú, Ceará
+          </p>
+          <a href="#booking" className="btn btn-light btn-lg px-4">
+            Book Your Stay
+          </a>
         </div>
       </div>
 
       {/* ABOUT */}
       <div className="container py-5 text-center">
-        <h2>A Unique Experience</h2>
-        <p>
-          A floating villa in Guriú, Ceará. Wake up surrounded by water, kitesurf
-          straight from your doorstep, and experience total connection with nature.
+        <h2 className="mb-4">Experience Nature Like Never Before</h2>
+        <p className="mx-auto" style={{ maxWidth: "700px", fontSize: "1.1rem" }}>
+          Wake up surrounded by water, feel the wind of one of the best kitesurf
+          spots in Brazil, and disconnect in a peaceful floating villa designed
+          for relaxation and adventure.
         </p>
       </div>
 
       {/* GALLERY */}
-      <div className="container-fluid">
-        <div className="row g-2">
+      <div className="container-fluid px-4 pb-5">
+        <div className="row g-3">
           {[1, 2, 3, 4, 5, 6].map((img) => (
-            <div className="col-md-4" key={img}>
+            <div className="col-md-4 overflow-hidden" key={img}>
               <img
                 src={`/gallery${img}.jpg`}
-                className="img-fluid"
                 alt="gallery"
+                className="img-fluid"
+                style={{
+                  transition: "transform 0.4s ease",
+                  cursor: "pointer",
+                }}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.transform = "scale(1.05)")
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.transform = "scale(1)")
+                }
               />
             </div>
           ))}
         </div>
       </div>
 
-      {/* BOOKING FORM */}
-      <div className="container py-5 text-center">
-        <h2>Request Booking</h2>
+      {/* BOOKING */}
+      <div id="booking" className="container py-5">
+        <div className="row justify-content-center">
+          <div className="col-md-6">
 
-        <form
-          onSubmit={handleSubmit}
-          className="mx-auto"
-          style={{ maxWidth: "400px" }}
-        >
-          <input
-            type="text"
-            name="name"
-            className="form-control mb-3"
-            placeholder="Your Name"
-            value={form.name}
-            onChange={handleChange}
-            required
-          />
+            <div
+              className="p-4 shadow rounded-4"
+              style={{ background: "#fff" }}
+            >
+              <h3 className="text-center mb-4">Request Booking</h3>
 
-          <input
-            type="email"
-            name="email"
-            className="form-control mb-3"
-            placeholder="Your Email"
-            value={form.email}
-            onChange={handleChange}
-            required
-          />
+              <form onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  name="name"
+                  className="form-control mb-3"
+                  placeholder="Your Name"
+                  value={form.name}
+                  onChange={handleChange}
+                  required
+                />
 
-          <input
-            type="tel"
-            name="phone"
-            className="form-control mb-3"
-            placeholder="Your Phone"
-            value={form.phone}
-            onChange={handleChange}
-            required
-          />
+                <input
+                  type="email"
+                  name="email"
+                  className="form-control mb-3"
+                  placeholder="Your Email"
+                  value={form.email}
+                  onChange={handleChange}
+                  required
+                />
 
-          <button
-            className="btn btn-dark w-100"
-            disabled={loading}
-          >
-            {loading ? "Sending..." : "Send Inquiry"}
-          </button>
-        </form>
+                <input
+                  type="tel"
+                  name="phone"
+                  className="form-control mb-3"
+                  placeholder="Your Phone"
+                  value={form.phone}
+                  onChange={handleChange}
+                  required
+                />
+
+                <button
+                  className="btn btn-dark w-100"
+                  disabled={loading}
+                >
+                  {loading ? "Sending..." : "Send Inquiry"}
+                </button>
+              </form>
+            </div>
+
+          </div>
+        </div>
       </div>
 
       {/* FOOTER */}
-      <footer className="text-center py-3 text-muted">
-        © {new Date().getFullYear()} Yara Floating Villa
+      <footer
+        className="text-center py-4"
+        style={{ background: "#111", color: "#aaa" }}
+      >
+        <p className="mb-1">© {new Date().getFullYear()} Yara Floating Villa</p>
+        <small>Guriú, Ceará, Brazil</small>
       </footer>
+
     </div>
   );
 }
