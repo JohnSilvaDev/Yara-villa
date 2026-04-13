@@ -10,7 +10,7 @@ app.use(express.json());
 app.post("/api/inquiry", async (req, res) => {
   console.log("REQUEST RECEIVED:", req.body);
 
-  const { name, email, phone } = req.body;
+  const { name, email, phone, checkIn, checkOut, guests, roomType } = req.body;
 
   try {
     const transporter = nodemailer.createTransport({
@@ -21,12 +21,23 @@ app.post("/api/inquiry", async (req, res) => {
       },
     });
 
+    const emailBody = `
+      <h3>Nova Solicitação de Reserva</h3>
+      <p><strong>Nome:</strong> ${name}</p>
+      <p><strong>Contato:</strong> ${email || phone}</p>
+      <hr />
+      <p><strong>Check-in:</strong> ${checkIn}</p>
+      <p><strong>Check-out:</strong> ${checkOut}</p>
+      <p><strong>Hóspedes:</strong> ${guests}</p>
+      <p><strong>Acomodação:</strong> ${roomType}</p>
+    `;
+
     const info = await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
       replyTo: email,
-      subject: "New Booking Inquiry",
-      text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}`,
+      subject: `Nova Reserva - ${name}`,
+      html: emailBody,
     });
 
     console.log("EMAIL SENT:", info.response);

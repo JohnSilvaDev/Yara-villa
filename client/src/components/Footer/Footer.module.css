@@ -1,11 +1,109 @@
 .footer {
-  background: black;
-  color: white;
-  padding: 30px 20px;
-  text-align: center;
+  background-color: var(--secondary);
+  color: #fff;
+  padding: 80px 0 30px;
 }
 
-.text {
-  font-size: 0.9rem;
-  opacity: 0.8;
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 80px;
+  margin-bottom: 60px;
+}
+
+.logo {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+.logo span {
+  color: var(--primary);
+}
+
+.about {
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 30px;
+  max-width: 300px;
+}
+
+.socials {
+  display: flex;
+  gap: 15px;
+}
+
+.socials a {
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.socials a:hover {
+  background: var(--primary);
+  transform: translateY(-5px);
+}
+
+.colTitle {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.links {
+  list-style: none;
+}
+
+.links li {
+  margin-bottom: 12px;
+}
+
+.links a {
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.links a:hover {
+  color: var(--primary);
+  padding-left: 5px;
+}
+
+.contactList {
+  list-style: none;
+}
+
+.contactList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 20px;
+}
+
+.contactList svg {
+  color: var(--primary);
+  margin-top: 5px;
+}
+
+.bottom {
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding-top: 30px;
+  text-align: center;
+  color: rgba(255,255,255,0.3);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
 }
