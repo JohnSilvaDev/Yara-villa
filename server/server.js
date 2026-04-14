@@ -52,3 +52,12 @@ app.post("/api/inquiry", async (req, res) => {
 
 
 app.listen(5000, () => console.log("Server running on port 5000"));
+
+// Graceful shutdown
+process.on("SIGINT", () => {
+  console.log("Shutting down server...");
+  server.close(() => {
+    console.log("Server closed");
+    process.exit(0);
+  });
+});

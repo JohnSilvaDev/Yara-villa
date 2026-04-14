@@ -5,7 +5,7 @@ function Hero() {
     <section 
       className={styles.hero} 
       id="hero" 
-      style={{ backgroundImage: "url('/hero_bg.jpg')" }}
+      style={{ backgroundImage: "url('/gemini.jpg')" }}
     >
       <div className={styles.overlay}></div>
       

@@ -5,13 +5,13 @@ const roomData = [
     id: 1,
     title: "Quarto 1",
     description: "1 cama de casal, 1 beliche",
-    image: "/room_bunk.jpg"
+    image: "/room_master2.jpg"
   },
   {
     id: 2,
     title: "Quarto 2",
     description: "1 cama de casal",
-    image: "/room_master.jpg"
+    image: "/gallery3.jpg"
   }
 ];
 

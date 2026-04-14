@@ -3,15 +3,15 @@ import styles from "./Gallery.module.css";
 import { FaPlus, FaTimes, FaExpandAlt } from "react-icons/fa";
 
 const images = [
-  { id: 1, src: "/gallery1.jpg", title: "Vista Externa" },
+  { id: 1, src: "/vistaexterna.JPEG", title: "Vista Externa" },
   { id: 2, src: "/gallery2.jpg", title: "Deck Principal" },
   { id: 3, src: "/gallery3.jpg", title: "Suíte Deluxe" },
   { id: 4, src: "/gallery4.jpg", title: "Interior Vila" },
-  { id: 5, src: "/gallery5.jpg", title: "Piscina Natural" },
+  { id: 5, src: "/gallery12.jpg", title: "Piscina Natural" },
   { id: 6, src: "/gallery6.jpg", title: "Ação Kitesurf" },
-  { id: 7, src: "/gallery7.jpg", title: "Pôr do Sol Yara" },
-  { id: 8, src: "/gallery8.jpg", title: "Detalhe Interior" },
-  { id: 9, src: "/hero_bg.jpg", title: "Vista Aérea" }
+  { id: 7, src: "/gallery7.jpeg", title: "Pôr do Sol Yara" },
+  { id: 8, src: "/gallery11.jpg", title: "Detalhe Interior" },
+  { id: 9, src: "/gallery102.jpg", title: "Vista Aérea" }
 ];
 
 function Gallery() {

@@ -7,7 +7,7 @@ function About() {
         <div className={styles.grid}>
           <div className={styles.imageCol}>
             <div className={styles.imageFrame}>
-              <img src="/gallery1.jpg" alt="Villa Exterior" className={styles.image} />
+              <img src="/gallery10.jpg" alt="Villa Exterior" className={styles.image} />
               <div className={styles.badge}>Desde 2020</div>
             </div>
           </div>
