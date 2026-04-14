@@ -1,66 +1,100 @@
 .hero {
   height: 100vh;
-  background: #ffee58; 
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
-  justify-content: center;
+  position: relative;
+  margin-top: -90px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.6));
 }
 
 .content {
+  position: relative;
+  z-index: 10;
   text-align: center;
-  color: black; /* 👈 important */
+  color: #fff;
+  max-width: 800px;
 }
 
 .title {
-  font-size: 3rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: black;
+  font-size: 5rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  line-height: 1.1;
 }
 
 .subtitle {
-  font-size: 1.2rem;
-  margin-top: 10px;
-  color: black;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
 }
 
-.buttonGroup {
-  margin-top: 20px;
+.ctaWrapper {
   display: flex;
-  gap: 12px;
+  gap: 20px;
   justify-content: center;
-}
-
-.primaryBtn {
-  background: white;
-  color: black;
-  padding: 10px 20px;
-  border-radius: 999px;
-  border: none;
-  transition: all 0.3s ease;
-}
-
-.primaryBtn:hover {
-  background: #f1f1f1;
-  transform: translateY(-2px);
 }
 
 .secondaryBtn {
   background: transparent;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 999px;
-  border: 1px solid white;
-  transition: all 0.3s ease;
+  color: #fff;
+  padding: 1rem 2.5rem;
+  border: 1px solid rgba(255,255,255,0.4);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+  backdrop-filter: blur(5px);
 }
 
 .secondaryBtn:hover {
-  background: white;
-  color: black;
+  background: rgba(255,255,255,0.1);
+  border-color: #fff;
 }
 
-@keyframes windFloat {
-  0% { transform: translateY(0px) translateX(0px); }
-  50% { transform: translateY(-5px) translateX(2px); }
-  100% { transform: translateY(0px) translateX(0px); }
+.scrollIndicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  z-index: 10;
+}
+
+.scrollIndicator span {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  opacity: 0.7;
+}
+
+.line {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, var(--primary), transparent);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 3.5rem;
+  }
 }

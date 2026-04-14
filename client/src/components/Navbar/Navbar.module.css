@@ -1,0 +1,84 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  transition: var(--transition);
+}
+
+.scrolled {
+  height: 70px;
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: var(--transition);
+}
+
+.scrolled .logo {
+  color: var(--secondary);
+}
+
+.logo span {
+  color: var(--primary);
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: var(--transition);
+  text-transform: uppercase;
+}
+
+.scrolled .navLinks a {
+  color: var(--secondary);
+}
+
+.navLinks a:hover {
+  color: var(--primary) !important;
+}
+
+.cta {
+  background-color: var(--primary);
+  color: white !important;
+  padding: 0.7rem 1.5rem;
+  border-radius: 2px;
+}
+
+.cta:hover {
+  background-color: var(--primary-dark);
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+}

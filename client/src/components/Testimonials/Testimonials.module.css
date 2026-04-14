@@ -1,0 +1,106 @@
+.section {
+  padding: 100px 0;
+  background-color: #fff;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  margin-bottom: 50px;
+  color: #222;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 80px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.userHeader {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.userName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.userTenure {
+  font-size: 0.9rem;
+  color: #717171;
+}
+
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.starIcon {
+  color: #222;
+  font-size: 0.8rem;
+}
+
+.dateInfo {
+  font-size: 0.85rem;
+  color: #222;
+  font-weight: 500;
+}
+
+.text {
+  color: #222;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.showMore {
+  background: transparent;
+  border: none;
+  font-weight: 600;
+  text-decoration: underline;
+  color: #222;
+  cursor: pointer;
+  padding: 0;
+  width: fit-content;
+  font-size: 1rem;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

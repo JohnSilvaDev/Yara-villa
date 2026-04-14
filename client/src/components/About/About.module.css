@@ -1,21 +1,99 @@
 .section {
-  padding: 80px 20px;
-  background: #ffffff;
+  background-color: var(--white);
 }
 
-.container {
-  max-width: 1000px;
-  margin: auto;
-  text-align: center;
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.imageCol {
+  position: relative;
+}
+
+.imageFrame {
+  position: relative;
+  padding: 20px;
+  border: 1px solid var(--primary);
+}
+
+.image {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+}
+
+.badge {
+  position: absolute;
+  top: 40px;
+  left: -20px;
+  background: var(--primary);
+  color: white;
+  padding: 15px 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+}
+
+.tagline {
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
 }
 
 .title {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
 }
 
 .text {
   font-size: 1.1rem;
-  color: #555;
-  line-height: 1.6;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+.list {
+  list-style: none;
+  margin-top: 2.5rem;
+}
+
+.list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: var(--secondary);
+}
+
+.list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 8px;
+  height: 0.5px;
+  background: var(--primary);
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  
+  .image {
+    height: 400px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
 }
