@@ -77,8 +77,71 @@
   background-color: var(--primary-dark);
 }
 
+.langSwitcher {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.langBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.75);
+  padding: 0.3rem 0.55rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: var(--transition);
+  line-height: 1;
+}
+
+.langBtn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.activeLang {
+  border-color: var(--primary) !important;
+  color: var(--primary) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.scrolled .langBtn {
+  border-color: rgba(0, 0, 0, 0.2);
+  color: var(--secondary);
+}
+
+.scrolled .activeLang {
+  border-color: var(--primary) !important;
+  color: var(--primary) !important;
+}
+
+.langFlag {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.langCode {
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
 @media (max-width: 768px) {
   .navLinks {
     display: none;
+  }
+
+  .langCode {
+    display: none;
+  }
+
+  .langBtn {
+    padding: 0.3rem 0.4rem;
   }
 }
