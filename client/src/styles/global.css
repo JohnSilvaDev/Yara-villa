@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 :root {
   --primary: #b8a27d;
@@ -24,15 +24,20 @@ html {
 }
 
 body {
-  font-family: 'Outfit', sans-serif;
+  /*font-family: 'Outfit', sans-serif;*/
+  font-family: 'Space Grotesk', sans-serif;
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.6;
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
-  font-family: 'Playfair Display', serif;
+h1,
+h2,
+h3,
+h4 {
+  /*font-family: 'Playfair Display', serif;*/
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
   color: var(--secondary);
 }
@@ -81,6 +86,7 @@ img {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
