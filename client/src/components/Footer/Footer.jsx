@@ -21,7 +21,7 @@ function Footer() {
           <div className={styles.col}>
             <h3 className={styles.logo}>Yara <span>Villa</span></h3>
             <p className={styles.about}>
-              {t("footer_about", "Experiência de luxo sustentável sobre as águas. Sua casa flutuante no paraíso.")}
+              {t("footer_about")}
             </p>
 
             <div className={styles.socials}>
@@ -56,7 +56,7 @@ function Footer() {
 
           {/* LINKS */}
           <div className={styles.col}>
-            <h4 className={styles.colTitle}>{t("footer_links", "Links Úteis")}</h4>
+            <h4 className={styles.colTitle}>{t("footer_links")}</h4>
             <ul className={styles.links}>
               <li><a href="#hero">{t("home")}</a></li>
               <li><a href="#about">{t("about")}</a></li>
@@ -67,10 +67,10 @@ function Footer() {
 
           {/* CONTACT */}
           <div className={styles.col}>
-            <h4 className={styles.colTitle}>{t("footer_contact", "Contato")}</h4>
+            <h4 className={styles.colTitle}>{t("footer_contact")}</h4>
             <ul className={styles.contactList}>
               <li>
-                <FaMapMarkerAlt /> Praia de Guriú, Camocim - CE
+                <FaMapMarkerAlt /> {t("booking_location")}
               </li>
 
               <li>
@@ -86,7 +86,7 @@ function Footer() {
               </li>
 
               <li>
-                32km do Aeroporto de Jericoacoara
+                {t("footer_airport")}
               </li>
             </ul>
           </div>
@@ -95,7 +95,7 @@ function Footer() {
 
         {/* BOTTOM */}
         <div className={styles.bottom}>
-          <p>© 2026 Yara Floating Villa. {t("footer_rights", "Todos os direitos reservados.")}</p>
+          <p>© 2026 Yara Floating Villa. {t("footer_rights")}</p>
         </div>
       </div>
     </footer>

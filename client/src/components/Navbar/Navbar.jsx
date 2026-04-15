@@ -8,6 +8,7 @@ const LANGUAGES = [
   { code: "en", flag: "🇬🇧", label: "EN" },
   { code: "fr", flag: "🇫🇷", label: "FR" },
   { code: "de", flag: "🇩🇪", label: "DE" },
+  { code: "es", flag: "🇪🇸", label: "ES" },
 ];
 
 function Navbar() {

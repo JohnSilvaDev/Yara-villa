@@ -1,6 +1,9 @@
+import { useTranslation } from "react-i18next";
 import styles from "./Hero.module.css";
 
 function Hero() {
+  const { t } = useTranslation();
+
   return (
     <section 
       className={styles.hero} 
@@ -11,27 +14,27 @@ function Hero() {
       
       <div className={`container ${styles.content}`}>
         <h1 className={`${styles.title} fade-in`}>
-          Yara Floating Villa
+          {t("hero_title")}
         </h1>
         <p className={`${styles.subtitle} fade-in`}>
-          Onde o luxo encontra o mar. Seu paraíso privativo em Guriú.
+          {t("hero_subtitle")}
         </p>
         
         <div className={styles.ctaWrapper}>
-          <a href="#about" className="btn-primary">Conhecer a Vila</a>
+          <a href="#about" className="btn-primary">{t("hero_cta")}</a>
           <a 
-            href="https://wa.me/558888057600?text=Olá! Gostaria de saber mais sobre a Yara Floating Villa em Guriú." 
+            href={`https://wa.me/558888057600?text=${encodeURIComponent(t("hero_whatsapp_msg"))}`}
             target="_blank" 
             rel="noreferrer"
             className={styles.secondaryBtn}
           >
-            Reservar via WhatsApp
+            {t("hero_whatsapp")}
           </a>
         </div>
       </div>
 
       <div className={styles.scrollIndicator}>
-        <span>Scroll</span>
+        <span>{t("hero_scroll")}</span>
         <div className={styles.line}></div>
       </div>
     </section>

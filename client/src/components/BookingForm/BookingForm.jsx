@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import styles from "./BookingForm.module.css";
 import { FaCalendarAlt, FaUsers, FaWhatsapp } from "react-icons/fa";
 
 function BookingForm() {
+  const { t } = useTranslation();
   const [form, setForm] = useState({
     name: "",
     checkIn: "",
@@ -19,12 +21,12 @@ function BookingForm() {
 
   const handleWhatsApp = (e) => {
     e.preventDefault();
-    const text = `Olá! Gostaria de solicitar uma pré-reserva na Yara Floating Villa em Guriú.\n\n` +
-      `Nome: ${form.name}\n` +
-      `Check-in: ${form.checkIn}\n` +
-      `Check-out: ${form.checkOut}\n` +
-      `Hóspedes: ${form.guests}\n\n` +
-      `Poderia verificar a disponibilidade?`;
+    const text = t("booking_wa_msg", {
+      name: form.name,
+      checkIn: form.checkIn,
+      checkOut: form.checkOut,
+      guests: form.guests
+    });
     
     const url = `https://wa.me/558888057600?text=${encodeURIComponent(text)}`;
     window.open(url, "_blank");
@@ -35,21 +37,18 @@ function BookingForm() {
       <div className="container">
         <div className={styles.grid}>
           <div className={styles.infoCol}>
-            <h5 className={styles.tagline}>Contato & Reservas</h5>
-            <h2 className={styles.title}>Inicie Sua Jornada Flutuante</h2>
-            <p className={styles.desc}>
-              Não temos reservas automáticas pois cada estadia é única. 
-              Preencha os dados abaixo e fale diretamente com o proprietário no WhatsApp para confirmar sua reserva.
-            </p>
+            <h5 className={styles.tagline}>{t("booking_tagline")}</h5>
+            <h2 className={styles.title}>{t("booking_title")}</h2>
+            <p className={styles.desc}>{t("booking_desc")}</p>
             
             <div className={styles.contactInfo}>
               <div className={styles.contactItem}>
-                <strong>Localização:</strong>
-                <span>Praia de Guriú, Camocim - CE</span>
+                <strong>{t("booking_location_label")}</strong>
+                <span>{t("booking_location")}</span>
               </div>
               <div className={styles.contactItem}>
-                <strong>Acesso:</strong>
-                <span>Atravessamos o rio para buscar você com nosso próprio barco.</span>
+                <strong>{t("booking_access_label")}</strong>
+                <span>{t("booking_access")}</span>
               </div>
             </div>
           </div>
@@ -58,46 +57,46 @@ function BookingForm() {
             <div className={styles.card}>
               <form onSubmit={handleWhatsApp} className={styles.form}>
                 <div className={styles.inputGroup}>
-                  <label>Seu Nome</label>
+                  <label>{t("booking_name_label")}</label>
                   <input 
                     type="text" 
                     name="name" 
                     value={form.name} 
                     onChange={handleChange} 
                     required 
-                    placeholder="Como podemos te chamar?" 
+                    placeholder={t("booking_name_placeholder")} 
                   />
                 </div>
 
                 <div className={styles.row}>
                   <div className={styles.inputGroup}>
-                    <label><FaCalendarAlt /> Check-in</label>
+                    <label><FaCalendarAlt /> {t("booking_checkin")}</label>
                     <input type="date" name="checkIn" value={form.checkIn} onChange={handleChange} required />
                   </div>
                   <div className={styles.inputGroup}>
-                    <label><FaCalendarAlt /> Check-out</label>
+                    <label><FaCalendarAlt /> {t("booking_checkout")}</label>
                     <input type="date" name="checkOut" value={form.checkOut} onChange={handleChange} required />
                   </div>
                 </div>
 
                 <div className={styles.inputGroup}>
-                  <label><FaUsers /> Hóspedes</label>
+                  <label><FaUsers /> {t("booking_guests")}</label>
                   <select name="guests" value={form.guests} onChange={handleChange}>
-                    <option value="1">1 Pessoa</option>
-                    <option value="2">2 Pessoas</option>
-                    <option value="3">3 Pessoas</option>
-                    <option value="4">4 Pessoas</option>
-                    <option value="5">5 Pessoas</option>
-                    <option value="6">6 Pessoas</option>
+                    <option value="1">1 {t("booking_person")}</option>
+                    <option value="2">2 {t("booking_people")}</option>
+                    <option value="3">3 {t("booking_people")}</option>
+                    <option value="4">4 {t("booking_people")}</option>
+                    <option value="5">5 {t("booking_people")}</option>
+                    <option value="6">6 {t("booking_people")}</option>
                   </select>
                 </div>
 
                 <button type="submit" className={styles.waButtonFull}>
-                  <FaWhatsapp /> Solicitar Disponibilidade no WhatsApp
+                  <FaWhatsapp /> {t("booking_submit")}
                 </button>
                 
                 <p className={styles.smallNote}>
-                  A reserva será concluída diretamente com o proprietário.
+                  {t("booking_note")}
                 </p>
               </form>
             </div>
