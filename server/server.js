@@ -1,7 +1,11 @@
-const express = require("express");
-const cors = require("cors");
-const nodemailer = require("nodemailer");
-require("dotenv").config();
+import express from "express";
+import cors from "cors";
+import nodemailer from "nodemailer";
+import dotenv from "dotenv";
+import * as url from "url";
+import serverless from "serverless-http";
+
+dotenv.config();
 
 const app = express();
 app.use(cors());
@@ -51,13 +55,24 @@ app.post("/api/inquiry", async (req, res) => {
 });
 
 
-app.listen(5000, () => console.log("Server running on port 5000"));
+let server;
+
+if (process.argv[1] && process.argv[1].endsWith("server.js")) {
+  server = app.listen(5000, () => console.log("Server running on port 5000"));
+}
 
 // Graceful shutdown
 process.on("SIGINT", () => {
   console.log("Shutting down server...");
-  server.close(() => {
-    console.log("Server closed");
+  if (server) {
+    server.close(() => {
+      console.log("Server closed");
+      process.exit(0);
+    });
+  } else {
     process.exit(0);
-  });
+  }
 });
+
+export const handler = serverless(app);
+export default app;

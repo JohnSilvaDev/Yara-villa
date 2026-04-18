@@ -1,5 +1,7 @@
+const API_BASE_URL = process.env.REACT_APP_API_URL || "";
+
 export const sendInquiry = async (form) => {
-  const res = await fetch("/api/inquiry", {
+  const res = await fetch(`${API_BASE_URL}/api/inquiry`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

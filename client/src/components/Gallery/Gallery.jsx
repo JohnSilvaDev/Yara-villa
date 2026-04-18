@@ -9,6 +9,7 @@ function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const images = [
+    { id: 10, src: "/demo-video.mp4", type: "video", titleKey: "gallery_vid1" },
     { id: 1, src: "/vistaexterna.JPEG", titleKey: "gallery_img1" },
     { id: 2, src: "/gallery2.jpg", titleKey: "gallery_img2" },
     { id: 3, src: "/gallery3.jpg", titleKey: "gallery_img3" },
@@ -44,12 +45,23 @@ function Gallery() {
           {visibleImages.map((img, index) => (
             <div key={index} className={styles.item} onClick={() => openLightbox(img)}>
               <div className={styles.imageWrapper}>
-                <img 
-                  src={img.src} 
-                  alt={t(img.titleKey)} 
-                  className={styles.image} 
-                  loading="lazy" 
-                />
+                {img.type === "video" ? (
+                  <video 
+                    src={img.src} 
+                    className={styles.image} 
+                    autoPlay
+                    muted 
+                    loop 
+                    playsInline 
+                  />
+                ) : (
+                  <img 
+                    src={img.src} 
+                    alt={t(img.titleKey)} 
+                    className={styles.image} 
+                    loading="lazy" 
+                  />
+                )}
                 <div className={styles.overlay}>
                   <FaExpandAlt className={styles.expandIcon} />
                   <span className={styles.imgTitle}>{t(img.titleKey)}</span>
@@ -75,11 +87,20 @@ function Gallery() {
             <FaTimes />
           </button>
           <div className={styles.lightboxContent} onClick={(e) => e.stopPropagation()}>
-            <img 
-              src={selectedImage.src} 
-              alt={t(selectedImage.titleKey)} 
-              className={styles.fullImage} 
-            />
+            {selectedImage.type === "video" ? (
+              <video 
+                src={selectedImage.src} 
+                className={styles.fullImage} 
+                controls 
+                autoPlay 
+              />
+            ) : (
+              <img 
+                src={selectedImage.src} 
+                alt={t(selectedImage.titleKey)} 
+                className={styles.fullImage} 
+              />
+            )}
             <div className={styles.caption}>{t(selectedImage.titleKey)}</div>
           </div>
         </div>
