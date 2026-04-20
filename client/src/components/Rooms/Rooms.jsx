@@ -9,13 +9,13 @@ function Rooms() {
       id: 1,
       title: t("room1_title"),
       description: t("room1_desc"),
-      image: "/room_master2.jpg"
+      image: "/room_master2.JPG"
     },
     {
       id: 2,
       title: t("room2_title"),
       description: t("room2_desc"),
-      image: "/gallery3.jpg"
+      image: "/gallery3.JPG"
     }
   ];
 

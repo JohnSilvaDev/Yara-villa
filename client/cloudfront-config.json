@@ -1,0 +1,40 @@
+{
+  "CallerReference": "yara-villa-deploy-1",
+  "Aliases": {
+    "Quantity": 2,
+    "Items": ["yarafloatingvilla.com.br", "www.yarafloatingvilla.com.br"]
+  },
+  "DefaultRootObject": "index.html",
+  "Origins": {
+    "Quantity": 1,
+    "Items": [
+      {
+        "Id": "S3-Website-Origin",
+        "DomainName": "yara-floating-villa-site.s3-website-us-east-1.amazonaws.com",
+        "CustomOriginConfig": {
+          "HTTPPort": 80,
+          "HTTPSPort": 443,
+          "OriginProtocolPolicy": "http-only"
+        }
+      }
+    ]
+  },
+  "DefaultCacheBehavior": {
+    "TargetOriginId": "S3-Website-Origin",
+    "ForwardedValues": {
+      "QueryString": false,
+      "Cookies": { "Forward": "none" }
+    },
+    "TrustedSigners": { "Enabled": false, "Quantity": 0 },
+    "ViewerProtocolPolicy": "redirect-to-https",
+    "MinTTL": 0
+  },
+  "CacheBehaviors": { "Quantity": 0 },
+  "Comment": "Yara Floating Villa Website",
+  "Enabled": true,
+  "ViewerCertificate": {
+    "ACMCertificateArn": "arn:aws:acm:us-east-1:831369408530:certificate/8e107b6f-a447-449d-9103-4ef29ac09ec5",
+    "SSLSupportMethod": "sni-only",
+    "MinimumProtocolVersion": "TLSv1.2_2021"
+  }
+}

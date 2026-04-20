@@ -48,7 +48,7 @@ function Testimonials() {
     <section className={styles.section} id="reviews">
       <div className="container">
         <h2 className={styles.title}>{t("testimonials_title")}</h2>
-        
+
         <div className={styles.grid}>
           {reviews.map((review) => (
             <div key={review.id} className={styles.card}>
@@ -59,7 +59,7 @@ function Testimonials() {
                   <p className={styles.userTenure}>{t(review.tenureKey)}</p>
                 </div>
               </div>
-              
+
               <div className={styles.ratingRow}>
                 <div className={styles.stars}>
                   {[...Array(5)].map((_, i) => (
@@ -70,10 +70,10 @@ function Testimonials() {
                   {t(review.dateKey)} • {t(review.stayKey)}
                 </span>
               </div>
-              
+
               <p className={styles.text}>{t(review.textKey)}</p>
-              
-              <button className={styles.showMore}>{t("testimonials_show_more")}</button>
+
+
             </div>
           ))}
         </div>
