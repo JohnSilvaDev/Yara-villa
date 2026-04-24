@@ -5,9 +5,7 @@ import { FaPlus, FaTimes, FaExpandAlt } from "react-icons/fa";
 
 function Gallery() {
   const { t } = useTranslation();
-  const [showAll, setShowAll] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
-
   const images = [
     { id: 10, src: "/demo-video.mp4", type: "video", titleKey: "Drone" },
     { id: 1, src: "/vistaexterna.jpeg", titleKey: "gallery_img1" },
@@ -20,8 +18,6 @@ function Gallery() {
     { id: 8, src: "/gallery11.JPG", titleKey: "gallery_img8" },
     { id: 9, src: "/gallery102.JPG", titleKey: "gallery_img9" }
   ];
-
-  const visibleImages = showAll ? images : images.slice(0, 6);
 
   const openLightbox = (img) => {
     setSelectedImage(img);
@@ -42,7 +38,7 @@ function Gallery() {
         </div>
 
         <div className={styles.grid}>
-          {visibleImages.map((img, index) => (
+          {images.map((img, index) => (
             <div key={index} className={styles.item} onClick={() => openLightbox(img)}>
               <div className={styles.imageWrapper}>
                 {img.type === "video" ? (
@@ -70,14 +66,6 @@ function Gallery() {
             </div>
           ))}
         </div>
-
-        {!showAll && (
-          <div className={styles.buttonWrapper}>
-            <button className={styles.seeMoreBtn} onClick={() => setShowAll(true)}>
-              <FaPlus /> {t("gallery_see_more")}
-            </button>
-          </div>
-        )}
       </div>
 
       {/* Lightbox / Modal */}

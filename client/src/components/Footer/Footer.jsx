@@ -80,8 +80,8 @@ function Footer() {
 
               <li>
                 <FaEnvelope />
-                <a href="mailto:reservas@yaravilla.com.br">
-                  reservas@yaravilla.com.br
+                <a href="mailto:yarakitesurfing@gmail.com">
+                  yarakitesurfing@gmail.com
                 </a>
               </li>
 
@@ -96,6 +96,9 @@ function Footer() {
         {/* BOTTOM */}
         <div className={styles.bottom}>
           <p>© 2026 Yara Floating Villa. {t("footer_rights")}</p>
+          <p className={styles.developer}>
+            made by <a href="https://www.linkedin.com/in/john-silva-394953249/?locale=pt" target="_blank" rel="noopener noreferrer">@JohnSilvaDev</a>
+          </p>
         </div>
       </div>
     </footer>
