@@ -14,7 +14,7 @@ function FloatingButtons() {
       </a>
 
       <a
-        href="https://instagram.com"
+        href="https://www.instagram.com/yara_floating_villa/"
         target="_blank"
         rel="noreferrer"
         className={styles.button}
