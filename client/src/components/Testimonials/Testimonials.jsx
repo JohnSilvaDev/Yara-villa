@@ -9,38 +9,38 @@ function Testimonials() {
     {
       id: 1,
       name: "Bruno",
-      tenureKey: "testimonials_verified",
+      tenureKey: "review1_tenure",
       dateKey: "review1_date",
       stayKey: "testimonials_stayed_one",
       textKey: "review1_text",
-      avatar: "/user1.jpg"
+      avatar: "/user1.avif"
     },
     {
       id: 2,
       name: "Marcelle",
-      tenureKey: "testimonials_traveler",
+      tenureKey: "review2_tenure",
       dateKey: "review2_date",
       stayKey: "testimonials_stayed_one",
       textKey: "review2_text",
-      avatar: "/user2.jpg"
+      avatar: "/user2.avif"
     },
     {
       id: 3,
       name: "Julian",
-      tenureKey: "testimonials_verified",
+      tenureKey: "review3_tenure",
       dateKey: "review3_date",
       stayKey: "testimonials_stayed_few",
       textKey: "review3_text",
-      avatar: "/user3.jpg"
+      avatar: "/user3.avif"
     },
     {
       id: 4,
       name: "Rosa",
-      tenureKey: "testimonials_traveler",
+      tenureKey: "review4_tenure",
       dateKey: "review4_date",
       stayKey: "testimonials_stayed_one",
       textKey: "review4_text",
-      avatar: "/user4.jpg"
+      avatar: "/user4.avif"
     }
   ];
 
