@@ -4,14 +4,12 @@
     "villa": "Die Villa",
     "gallery": "Galerie",
     "booking": "Buchen",
-
     "hero_title": "Yara Floating Villa",
     "hero_subtitle": "Wo Luxus auf das Meer trifft. Ihr privates Paradies in Guriú.",
     "hero_cta": "Die Villa entdecken",
     "hero_whatsapp": "Über WhatsApp buchen",
     "hero_whatsapp_msg": "Hallo! Ich möchte mehr über die Yara Floating Villa in Guriú erfahren.",
     "hero_scroll": "Scroll",
-
     "about_badge": "Seit 2020",
     "about_tagline": "Der Ursprung eines Traums",
     "about_title": "Schwimmender Luxus & Kitesurfer-Paradies",
@@ -21,13 +19,11 @@
     "about_list2": "Nachhaltigkeit: 100% Solarenergie",
     "about_list3": "Konnektivität: Starlink-WLAN an Bord",
     "about_list4": "Annehmlichkeiten: Frühstück & Bootstransfer inklusive",
-
     "rooms_title": "Wo Sie schlafen werden",
     "room1_title": "Zimmer 1",
     "room1_desc": "1 Doppelbett, 1 Etagenbett",
     "room2_title": "Zimmer 2",
     "room2_desc": "1 Doppelbett",
-
     "amenities_title": "Exklusive Services",
     "amenities_subtitle": "Alles, was Sie für ein vollständiges Eintauchen in die Natur brauchen",
     "amenity1_title": "Starlink-WLAN",
@@ -46,7 +42,6 @@
     "amenity7_desc": "Entspannungssitzungen an Bord auf Anfrage.",
     "amenity8_title": "Natürlicher Pool",
     "amenity8_desc": "Tauchen Sie in das kristallklare Wasser rund um die Villa.",
-
     "gallery_title": "Galerie der Momente",
     "gallery_subtitle": "Entdecken Sie jedes Detail Ihres schwimmenden Rückzugsortes in Guriú",
     "gallery_see_more": "Mehr Fotos ansehen",
@@ -59,7 +54,6 @@
     "gallery_img7": "Yara-Sonnenuntergang",
     "gallery_img8": "Innendetail",
     "gallery_img9": "Luftaufnahme",
-
     "testimonials_title": "Was man über uns sagt",
     "testimonials_verified": "Verifizierter Gast",
     "testimonials_traveler": "Reisender",
@@ -67,14 +61,13 @@
     "testimonials_stayed_one": "Blieb eine Nacht",
     "testimonials_stayed_few": "Blieb einige Nächte",
     "review1_date": "Januar 2026",
-    "review1_text": "Unser Aufenthalt war wunderbar! Für diejenigen, die etwas anderes und direkten Kontakt mit der Natur mögen. Ein Paradies!!!",
+    "review1_text": "Unser Aufenthalt war wunderbar! Für diejenigen, die etwas anderes und direkten Kontakt mit der Natur mögen. Ein himmlischer Ort!!!",
     "review2_date": "Juli 2025",
-    "review2_text": "Ich habe den Aufenthalt in der Yara Floating Villa geliebt! Sehr einladende und proaktive Mitarbeiter. Sehr ruhig, selbst mitten im Ozean spürt man die Meeresbewegung nicht...",
-    "review3_date": "vor 1 Woche",
-    "review3_text": "Wenn Sie wirklich ein immersives Erlebnis wollen, sich abschalten und sich wie auf einer einsamen Insel fühlen möchten, ist dies der ideale Ort für Sie...",
+    "review2_text": "Ich habe es geliebt, in der Yara Floating Villa zu übernachten! Das Personal war sehr freundlich und proaktiv. Sehr friedlich, obwohl wir mitten im Ozean sind, spürt man die Bewegungen des Meeres nicht. Wir waren am besten Ort für Kitesurfer. Ich werde auf jeden Fall nach Yara zurückkehren. Danke an alle!!",
+    "review3_date": "vor 3 Wochen",
+    "review3_text": "Wenn Sie wirklich eine immersive Erfahrung machen, abschalten und sich wie auf einer einsamen Insel fühlen möchten, ist dies Ihr Ort.\nDanke für eine einzigartige Erinnerung!",
     "review4_date": "Juli 2025",
-    "review4_text": "Wir hatten einen sehr einzigartigen Aufenthalt in der schwimmenden Villa in Guriú! Die Villa liegt inmitten schöner Umgebung. Jeden Tag konnten wir den Sonnenuntergang bewundern. Es war ein friedlicher Ort...",
-
+    "review4_text": "Wir hatten einen sehr einzigartigen Aufenthalt in der schwimmenden Villa in Guriu! Die Villa liegt in einer wunderschönen Umgebung. Jeden Tag konnten wir den Sonnenuntergang wunderschön betrachten. Es war ein friedlicher Ort, an dem es jedoch viel zu tun gab. Der Ort ist perfekt, wenn Sie Kitesurfen mögen. Sie können Ihren Drachen von der Villa aus starten. Wenn Sie nicht kiten, können Sie die wunderschöne Umgebung genießen. Das Personal war sehr hilfsbereit und hat uns köstliches Frühstück gemacht. Wir hatten rund um die Uhr einen Bootsfahrer zur Verfügung. So konnten wir jederzeit ans Festland fahren, wenn wir wollten. Ich empfehle einen Besuch dieses Ortes, es ist einer der einzigartigsten Aufenthalte, die ich bisher hatte :) Danke für alles Rodrigo!",
     "booking_tagline": "Kontakt & Reservierungen",
     "booking_title": "Beginnen Sie Ihre schwimmende Reise",
     "booking_desc": "Wir haben keine automatischen Buchungen, da jeder Aufenthalt einzigartig ist. Füllen Sie die Daten unten aus und sprechen Sie direkt mit dem Eigentümer auf WhatsApp, um Ihre Reservierung zu bestätigen.",
@@ -92,10 +85,13 @@
     "booking_submit": "Verfügbarkeit auf WhatsApp prüfen",
     "booking_note": "Die Buchung wird direkt mit dem Eigentümer abgeschlossen.",
     "booking_wa_msg": "Hallo! Ich möchte eine Vorreservierung in der Yara Floating Villa in Guriú anfragen.\n\nName: {{name}}\nAnreise: {{checkIn}}\nAbreise: {{checkOut}}\nGäste: {{guests}}\n\nKönnten Sie die Verfügbarkeit prüfen?",
-
     "footer_about": "Nachhaltiges Luxuserlebnis auf dem Wasser. Ihr schwimmendes Zuhause im Paradies.",
     "footer_links": "Nützliche Links",
     "footer_contact": "Kontakt",
     "footer_airport": "32km vom Flughafen Jericoacoara",
-    "footer_rights": "Alle Rechte vorbehalten."
+    "footer_rights": "Alle Rechte vorbehalten.",
+    "review1_tenure": "9 Jahre auf Airbnb",
+    "review2_tenure": "11 Jahre auf Airbnb",
+    "review3_tenure": "12 Jahre auf Airbnb",
+    "review4_tenure": "6 Jahre auf Airbnb"
 }
