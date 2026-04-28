@@ -13,7 +13,7 @@ function Testimonials() {
       dateKey: "review1_date",
       stayKey: "testimonials_stayed_one",
       textKey: "review1_text",
-      avatar: "/user1.avif"
+      avatar: "/user1.jpg"
     },
     {
       id: 2,
@@ -22,7 +22,7 @@ function Testimonials() {
       dateKey: "review2_date",
       stayKey: "testimonials_stayed_one",
       textKey: "review2_text",
-      avatar: "/user2.avif"
+      avatar: "/user2.jpg"
     },
     {
       id: 3,
@@ -31,7 +31,7 @@ function Testimonials() {
       dateKey: "review3_date",
       stayKey: "testimonials_stayed_few",
       textKey: "review3_text",
-      avatar: "/user3.avif"
+      avatar: "/user3.jpg"
     },
     {
       id: 4,
@@ -40,7 +40,7 @@ function Testimonials() {
       dateKey: "review4_date",
       stayKey: "testimonials_stayed_one",
       textKey: "review4_text",
-      avatar: "/user4.avif"
+      avatar: "/user4.jpg"
     }
   ];
 
