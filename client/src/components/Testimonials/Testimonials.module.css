@@ -75,10 +75,6 @@
   line-height: 1.6;
   font-size: 1rem;
   margin-bottom: 10px;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 .showMore {
